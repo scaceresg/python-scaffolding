@@ -136,10 +136,61 @@ def test_add():
 * You can now run `make all` to run the `install lint test`
 steps in the `Makefile`.
 
-## Push changes to GitHub
+## Pushing changes to GitHub
 
 * Add the new files using `git add .`
 
 * Commit changes: `$ git commit -m "[message]"`
 
 * Push changes: `$ git push -u origin main`
+
+## Setting up GitHub Actions
+
+In your GitHub repository page, go to Actions:
+
+* Click on Set up a workflow yourself
+
+* It creates a `main.yml` file in the `/.github/workflows/` directory of
+your repository
+
+* Add the following instructions:
+
+```
+name: Python application test with GitHub Actions
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        make install
+    - name: Lint with Pylint
+      run: |
+        make lint
+    - name: Test with Pytest
+      run: |
+        make test
+    - name: Format code with Python black
+      run: |
+        make format
+```
+
+* Commit changes
+
+* Go to Actions, and click on All workflows on the left side bar:
+
+    - You can select the last commits and check the jobs that were
+    performed.
+
+    - When click on one of the commits/updates/jobs, you can see the
+    jobs on the left side bar and also **create status badge** to 
+    show on your README.md file.
+
+    - You can copy and paste this badge to show the current status of
+    your project.
