@@ -138,3 +138,8 @@ steps in the `Makefile`.
 
 ### Push changes to GitHub
 
+* Add the new files using `git add .`
+
+* Commit changes: `$ git commit -m "[message]"`
+
+* Push changes: `$ git push -u origin main`
