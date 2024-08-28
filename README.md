@@ -136,7 +136,7 @@ def test_add():
 * You can now run `make all` to run the `install lint test`
 steps in the `Makefile`.
 
-### Push changes to GitHub
+## Push changes to GitHub
 
 * Add the new files using `git add .`
 
