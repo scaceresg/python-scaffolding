@@ -1,3 +1,5 @@
+[![Python application test with GitHub Actions](https://github.com/scaceresg/python-scaffolding/actions/workflows/main.yml/badge.svg)](https://github.com/scaceresg/python-scaffolding/actions/workflows/main.yml)
+
 # Python Scaffolding 
 
 This is a project scaffold for Python.
