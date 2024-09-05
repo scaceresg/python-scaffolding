@@ -1,10 +1,10 @@
-[![Python application test with GitHub Actions](https://github.com/scaceresg/python-scaffolding/actions/workflows/main.yml/badge.svg)](https://github.com/scaceresg/python-scaffolding/actions/workflows/main.yml)
+
 
 # Python Scaffolding 
 
-This is a project scaffold for Python.
+This is a scaffold for projects with Python.
 
-## Setting up key-pairs for SSH login
+## Set up Key-pairs for SSH Login
 
 In the Linux terminal, generate SSH login key-pairs:
 
@@ -20,46 +20,53 @@ Copy this key and go to your GitHub account.
 
 * Go to the account settings > SSH and GPG keys > New SSH Key.
 
-* Add a Title and Paste the public key in Key. Click on Add SSH key.
+* Add a title and paste the public key into the Key space. Click on Add SSH key.
 
 Now you can SSH login from your Linux terminal.
 
-## Creating the scaffold files
+## Create a GitHub Repo
 
-* Create a GitHub repository: `python-scaffolding` 
+* Create a GitHub repository: `scaffold-python` 
 
     - Add a README.md and a `.gitignore` file using the Python template
 
 * Clone the GitHub repository:
 
-    - Run `git clone git@github.com:scaceresg/python-scaffolding.git`
+    - Run `git clone git@github.com:scaceresg/scaffold-python.git`
 
-* Create a `Makefile`: `touch Makefile`
+## Create Scaffold Files
 
-* Create Python files and the `requirements.txt` file:
+Inside the repository directory, create the following files:
 
-    - Run `touch hello.py`, `touch test_hello.py` and 
-    `touch requirements.txt`
+* **Makefile**: `touch Makefile`
 
-## Defining a Python environment
+* **[script_name].py**: Python files with your source code. For example:
+    
+    - `hello.py`: Python file that sums two numbers and returns the result
+ 
+    - `test_hello.py`: Python file that tests `hello.py`
+
+* **requirements.txt**: `touch requirements.txt` 
+
+## Set up a Python Environment
 
 * Set up a Python environment for the current project using:
 
-    `python3 -m venv ~/.[project_name]`
+    `python3 -m venv /.[project_name]`
 
     For example:
 
-    - `$ python3 -m venv ~/.python-scaffolding`
+    - `$ python3 -m venv /.scaffold-python`
 
 * Activate the Python environment:
 
-    `$ source ~/.python-scaffolding/bin/activate`
+    `$ source /.scaffold-python/bin/activate`
 
 * Check the location of the environment:
 
     `$ which python`
 
-    `> ~/.python-scaffold/bin/python`
+    `> /.scaffold-python/bin/python`
 
 ## Configure `Makefile`
 
@@ -98,8 +105,9 @@ pytest-cov
 
 * Once you have added the instructions to the `Makefile` and the 
 packages to the `requirements.txt`, you can run `make install`
+to install the packages into the Python environment.
 
-## Modify the Python scripts
+## Add your Source Code into the Python scripts
 
 ### `hello.py`
 
@@ -138,7 +146,7 @@ def test_add():
 * You can now run `make all` to run the `install lint test`
 steps in the `Makefile`.
 
-## Pushing changes to GitHub
+## Push changes to GitHub
 
 * Add the new files using `git add .`
 
@@ -146,7 +154,7 @@ steps in the `Makefile`.
 
 * Push changes: `$ git push -u origin main`
 
-## Setting up GitHub Actions
+## Set up GitHub Actions
 
 In your GitHub repository page, go to Actions:
 
@@ -190,8 +198,8 @@ jobs:
     - You can select the last commits and check the jobs that were
     performed.
 
-    - When click on one of the commits/updates/jobs, you can see the
-    jobs on the left side bar and also **create status badge** to 
+    - When you click on one of the commits/updates/jobs, you can see the
+    jobs on the left sidebar and also **create status badge** to 
     show on your README.md file.
 
     - You can copy and paste this badge to show the current status of
