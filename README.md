@@ -2,7 +2,21 @@
 
 # Python Scaffolding 
 
-This is a scaffold for projects with Python.
+**Contents**:
+
+- [Python Scaffolding](#python-scaffolding)
+  - [Set up Key-pairs for SSH Login](#set-up-key-pairs-for-ssh-login)
+  - [Create a GitHub Repo](#create-a-github-repo)
+  - [Create Scaffold Files](#create-scaffold-files)
+  - [Set up a Python Environment](#set-up-a-python-environment)
+  - [Configure `Makefile`](#configure-makefile)
+  - [Configure `requirements.txt`](#configure-requirementstxt)
+  - [Add your Source Code into the Python scripts](#add-your-source-code-into-the-python-scripts)
+    - [`hello.py`](#hellopy)
+    - [`test_hello.py`](#test_hellopy)
+  - [Push changes to GitHub](#push-changes-to-github)
+  - [Set up GitHub Actions](#set-up-github-actions)
+
 
 ## Set up Key-pairs for SSH Login
 
