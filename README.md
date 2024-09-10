@@ -20,7 +20,8 @@ Copy this key and go to your GitHub account.
 
 * Go to the account settings > SSH and GPG keys > New SSH Key.
 
-* Add a title and paste the public key into the Key space. Click on Add SSH key.
+* Add a title and paste the public key into the Key space. Click on 
+Add SSH key.
 
 Now you can SSH login from your Linux terminal.
 
@@ -28,11 +29,12 @@ Now you can SSH login from your Linux terminal.
 
 * Create a GitHub repository: `scaffold-python` 
 
-    - Add a README.md and a `.gitignore` file using the Python template
+  - Add a README.md and a `.gitignore` file using the Python 
+  template
 
 * Clone the GitHub repository:
 
-    - Run `git clone git@github.com:scaceresg/scaffold-python.git`
+  - Run `git clone git@github.com:scaceresg/scaffold-python.git`
 
 ## Create Scaffold Files
 
@@ -40,11 +42,13 @@ Inside the repository directory, create the following files:
 
 * **Makefile**: `touch Makefile`
 
-* **[script_name].py**: Python files with your source code. For example:
+* **[script_name].py**: Python files with your source code. For 
+example:
     
-    - `hello.py`: Python file that sums two numbers and returns the result
+  - `hello.py`: Python file that sums two numbers and returns the 
+  result
  
-    - `test_hello.py`: Python file that tests `hello.py`
+  - `test_hello.py`: Python file that tests `hello.py`
 
 * **requirements.txt**: `touch requirements.txt` 
 
@@ -52,21 +56,21 @@ Inside the repository directory, create the following files:
 
 * Set up a Python environment for the current project using:
 
-    `python3 -m venv /.[project_name]`
+  `python3 -m venv /.[project_name]`
 
-    For example:
+  For example:
 
-    - `$ python3 -m venv /.scaffold-python`
+  - `$ python3 -m venv /.scaffold-python`
 
 * Activate the Python environment:
 
-    `$ source /.scaffold-python/bin/activate`
+  `$ source /.scaffold-python/bin/activate`
 
 * Check the location of the environment:
 
-    `$ which python`
+  `$ which python`
 
-    `> /.scaffold-python/bin/python`
+  `> /.scaffold-python/bin/python`
 
 ## Configure `Makefile`
 
@@ -124,7 +128,7 @@ print(f"This is the sum: 1 + 2 = {result}")
 
 * You can run `make lint` so Pylint analyses the code:
 
-    - Pylint checks the syntax and debugs your code
+  - Pylint checks the syntax and debugs your code
 
 * You can also run `make format` so `black` formats the 
 code.
@@ -160,8 +164,8 @@ In your GitHub repository page, go to Actions:
 
 * Click on Set up a workflow yourself
 
-* It creates a `main.yml` file in the `/.github/workflows/` directory of
-your repository
+* It creates a `main.yml` file in the `/.github/workflows/` 
+directory of your repository
 
 * Add the following instructions:
 
@@ -193,14 +197,15 @@ jobs:
 
 * Commit changes
 
-* Go to Actions, and click on All workflows on the left side bar:
+* Go to Actions, and click on All workflows on the left side 
+bar:
 
-    - You can select the last commits and check the jobs that were
-    performed.
+  - You can select the last commits and check the jobs that 
+  were performed.
 
-    - When you click on one of the commits/updates/jobs, you can see the
-    jobs on the left sidebar and also **create status badge** to 
-    show on your README.md file.
+  - When you click on one of the commits/updates/jobs, you can 
+  see the jobs on the left sidebar and also **create status badge** 
+  to show on your README.md file.
 
-    - You can copy and paste this badge to show the current status of
-    your project.
+  - You can copy and paste this badge to show the current 
+  status of your project.
