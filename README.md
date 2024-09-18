@@ -68,23 +68,56 @@ example:
 
 ## Set up a Python Environment
 
+### For Linux
+
 * Set up a Python environment for the current project using:
 
-  `python3 -m venv /.[project_name]`
+  ```
+  python3 -m venv ./.[project_name]
+  ```
 
   For example:
 
-  - `$ python3 -m venv /.scaffold-python`
+  ```
+  $ python3 -m venv ./.scaffold-python
+  ```
 
 * Activate the Python environment:
 
-  `$ source /.scaffold-python/bin/activate`
+  ```
+  $ source ./.scaffold-python/bin/activate
+  ```
 
 * Check the location of the environment:
 
-  `$ which python`
+  ```
+  $ which python
+  ```
+  ```
+  ./.scaffold-python/bin/python
+  ```
 
-  `> /.scaffold-python/bin/python`
+### For Windows
+
+* Set up a Python environment for the current project using:
+
+  ```
+  > python -m venv .\.[project_name]
+  ```
+
+* Activate the Python environment:
+
+  - Using Powershell:
+
+    ```
+    > .\.[project_name]\Scripts\Activate.ps1
+    ```
+    
+  - Using CMD:
+
+    ```
+    > .\.[project_name]\Scripts\activate.bat
+    ```
 
 ## Configure `Makefile`
 
