@@ -9,6 +9,8 @@
   - [Create a GitHub Repo](#create-a-github-repo)
   - [Create Scaffold Files](#create-scaffold-files)
   - [Set up a Python Environment](#set-up-a-python-environment)
+    - [For Linux](#for-linux)
+    - [For Windows](#for-windows)
   - [Configure `Makefile`](#configure-makefile)
   - [Configure `requirements.txt`](#configure-requirementstxt)
   - [Add your Source Code into the Python scripts](#add-your-source-code-into-the-python-scripts)
@@ -20,9 +22,11 @@
 
 ## Set up Key-pairs for SSH Login
 
-In the Linux terminal, generate SSH login key-pairs:
+Using the terminal, generate SSH login key-pairs:
 
-`$ ssh-keygen -t rsa`
+```
+$ ssh-keygen -t rsa
+```
 
 * Click Enter for directory, passphrase and repeat passphrase.
 
@@ -48,23 +52,34 @@ Now you can SSH login from your Linux terminal.
 
 * Clone the GitHub repository:
 
-  - Run `git clone git@github.com:scaceresg/scaffold-python.git`
+  ```
+  git clone git@github.com:scaceresg/scaffold-python.git
+  ```
 
 ## Create Scaffold Files
 
 Inside the repository directory, create the following files:
 
-* **Makefile**: `touch Makefile`
+* **Makefile**: 
+  
+  ```
+  touch Makefile
+  ```
 
-* **[script_name].py**: Python files with your source code. For 
-example:
+* **[script_name].py**: Python files with your source code. 
+  
+  For example:
     
   - `hello.py`: Python file that sums two numbers and returns the 
   result
  
   - `test_hello.py`: Python file that tests `hello.py`
 
-* **requirements.txt**: `touch requirements.txt` 
+* **requirements.txt**: 
+  
+  ```
+  touch requirements.txt
+  ``` 
 
 ## Set up a Python Environment
 
@@ -201,9 +216,17 @@ steps in the `Makefile`.
 
 * Add the new files using `git add .`
 
-* Commit changes: `$ git commit -m "[message]"`
+* Commit changes: 
+  
+  ```
+  $ git commit -m "[message]"
+  ```
 
-* Push changes: `$ git push -u origin main`
+* Push changes: 
+  
+  ```
+  $ git push -u origin main
+  ```
 
 ## Set up GitHub Actions
 
@@ -216,31 +239,31 @@ directory of your repository
 
 * Add the following instructions:
 
-```
-name: Python application test with GitHub Actions
-on: [push]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.8
-    - name: Install dependencies
-      run: |
-        make install
-    - name: Lint with Pylint
-      run: |
-        make lint
-    - name: Test with Pytest
-      run: |
-        make test
-    - name: Format code with Python black
-      run: |
-        make format
-```
+  ```
+  name: Python application test with GitHub Actions
+  on: [push]
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          make install
+      - name: Lint with Pylint
+        run: |
+          make lint
+      - name: Test with Pytest
+        run: |
+          make test
+      - name: Format code with Python black
+        run: |
+          make format
+  ```
 
 * Commit changes
 
