@@ -88,13 +88,13 @@ Inside the repository directory, create the following files:
 * Set up a Python environment for the current project using:
 
   ```
-  python3 -m venv ./.[project_name]
+  python -m venv ./.[project_name]
   ```
 
   For example:
 
   ```
-  $ python3 -m venv ./.scaffold-python
+  $ python -m venv ./.scaffold-python
   ```
 
 * Activate the Python environment:
@@ -133,6 +133,19 @@ Inside the repository directory, create the following files:
     ```
     > .\.[project_name]\Scripts\activate.bat
     ```
+
+  - Using Git Bash:
+
+    ```
+    > cd ./.[project_name]/Scripts/
+    > . activate
+    ```
+
+* Deactivate the Python environment:
+
+  ```
+  > deactivate
+  ```
 
 ## Configure `Makefile`
 
