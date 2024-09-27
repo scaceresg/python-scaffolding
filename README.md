@@ -137,8 +137,7 @@ Inside the repository directory, create the following files:
   - Using Git Bash:
 
     ```
-    > cd ./.[project_name]/Scripts/
-    > . activate
+    > source .[project_name]/Scripts/activate
     ```
 
 * Deactivate the Python environment:
